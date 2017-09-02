@@ -27,7 +27,11 @@ serve = do
 
 app :: SpockM () MySession MyAppState ()
 app = do
-    get root $ html index
-    get ("paragraphs" <//> var ,"qty") $ \qty -> do
+    get root $ html $ index Nothing
+    post root $ do
+        qty <- param "paragraphs"
+        txt <- liftIO $ mapM paragraphs qty
+        html $ index txt
+    get ("paragraphs" <//> var) $ \qty -> do
         payload <- liftIO $ paragraphs qty
         json payload

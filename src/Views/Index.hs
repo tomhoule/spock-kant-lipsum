@@ -2,13 +2,14 @@
 
 module Views.Index where
 
+import API.Paragraphs
 import Text.Blaze.Html5 as H
 import Text.Blaze.Html.Renderer.Text
 import Data.Text.Lazy (toStrict)
 import Data.Text
 
-index :: Text
-index = toStrict $ renderHtml $ H.html $ do
+index :: Maybe Paragraphs -> Text
+index _ = toStrict $ renderHtml $ H.html $ do
     H.body $ do
         H.h1 $ H.text "O, hi"
         H.div $ do

@@ -1,16 +1,18 @@
 module API.Paragraphs where
 
-import Data.ByteString (ByteString)
+import System.Random
+import Data.Text (Text)
 import Data.Vector
 import Prelude hiding (length)
 
 import Data.Kantish (fragments)
 
-type Paragraphs = Vector ByteString
+type Paragraphs = Vector Text
 
 -- | This needs to be in the IO monad because RNG
 paragraphs :: Int -> IO Paragraphs
 paragraphs qty = do
-    start <- getRandom (0, (length fragments - (qty + 1)))
+    rng <- getStdGen
+    start <- getStdRandom $ randomR (0, (length fragments - (qty + 1)))
     let end = start + qty
     return $ slice start end fragments

@@ -3,10 +3,10 @@
 
 module Data.Kantish where
 
-import Data.ByteString
+import Data.Text
 import Data.Vector
 
-fragments :: Vector ByteString
+fragments :: Vector Text
 fragments = [
     "As any dedicated reader can clearly see, the Ideal of \
     \ practical reason is a representation of, as far as I know, the things \

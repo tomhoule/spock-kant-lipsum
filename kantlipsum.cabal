@@ -16,6 +16,7 @@ cabal-version:       >=1.10
 library
   hs-source-dirs:      src
   exposed-modules:     Lib
+                     , API.Paragraphs
                      , Data.Kantish
                      , Views.Index
   build-depends:       base >= 4.7 && < 5
@@ -23,6 +24,7 @@ library
                      , bytestring
                      , Spock
                      , Spock-core
+                     , random
                      , reroute
                      , text
                      , mtl
