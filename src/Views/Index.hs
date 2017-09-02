@@ -60,4 +60,4 @@ index out = toStrict $ renderHtml $ H.docTypeHtml $ do
             H.text "Made with love and moral certainty by "
             H.a ! A.href "https://twitter.com/_tomhoule" $ H.text "@_tomhoule"
           H.p $ do
-            H.a ! A.href "/404" $ H.text "Browse source on Github"
+            H.a ! A.href "https://github.com/tomhoule/spock-kant-lipsum" $ H.text "Browse source on Github"
