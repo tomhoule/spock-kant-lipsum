@@ -1,0 +1,18 @@
+{
+  "name": "css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "compile": "gulp sass",
+    "watch": "gulp sass:watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^0.4.3",
+    "bulmaswatch": "^0.4.2",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}

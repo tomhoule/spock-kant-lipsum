@@ -1,0 +1,8 @@
+@import 'node_modules/bulmaswatch/cerulean/_variables.scss';
+@import 'node_modules/bulma/bulma.sass';
+@import 'node_modules/bulmaswatch/cerulean/_overrides.scss';
+
+.lipsum {
+  margin-top: 20px;
+  min-height: 600px;
+}
